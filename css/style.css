@@ -1,0 +1,858 @@
+.dn {
+    display: none !important;
+}
+
+.db {
+    display: block !important;
+}
+
+a {
+    transition: .3s;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.wrapper--min {
+    width: 1000px;
+}
+
+section {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.btn-up {
+    display: none;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: yellow;
+    border: 2px solid #000;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 200;
+    transition: .3s;
+}
+
+.btn-up:hover {
+    background-color: #503e1c;
+    color: yellow;
+    text-decoration: none;
+}
+
+/* -----------------BURGER------------------------- */
+.burger-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 30px;
+    transition: .3s;
+}
+
+.burger-btn__row {
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    transition: .3s;
+}
+
+.burger-btn__row:before,
+.burger-btn__row:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.burger-btn__row:before {
+    margin-top: -10px;
+    transition: .3s;
+}
+
+.burger-btn__row:after {
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.burger-btn--active.burger-btn__row {
+    height: 0;
+    transition: .3s;
+}
+
+.burger-btn--active.burger-btn__row:before {
+    margin-top: 0;
+    transform: rotate(45deg);
+    background-color: #000;
+    z-index: 110;
+    transition: .3s;
+}
+
+.burger-btn--active.burger-btn__row:after {
+    margin-top: 0;
+    transform: rotate(-45deg);
+    background-color: #000;
+    z-index: 110;
+    transition: .3s;
+}
+
+.burger-nav--active {
+    transform: translate(0, 0) !important;
+    transition: .3s;
+}
+
+/* .closed {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 110;
+    cursor: pointer;
+}
+
+.closed:before,
+.closed:after {
+    content: "";
+    display: block;
+    background-color: #000;
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.closed:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closed:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+} */
+
+/* /////////////////BURGER------------------------- */
+
+
+
+
+/* ----------------HAEDER------------------- */
+.header {
+    overflow: hidden;
+}
+
+.nav-position {
+    position: relative;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: yellow;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid #000;
+    border-radius: 50%;
+    line-height: 32px;
+    padding-top: 44px;
+    transition: .3s;
+}
+
+.logo:hover {
+    /* background-color: #503e1c; */
+    text-decoration: none;
+    color: #503e1c;
+}
+
+.header {
+    margin-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 90;
+    color: #fff;
+}
+
+.header__text {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header__location {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header__tel {
+    margin-bottom: 1rem;
+}
+
+.header__tel-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transition: .3s;
+}
+
+.header__tel-link:hover {
+    color: yellow;
+}
+
+.header__tel-link--contacts {
+    color: #fff;
+    font-size: 28px;
+    display: block;
+}
+
+.header__tel-link--contacts:hover {
+    color: yellow;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #000;
+    border-radius: 5px;
+    background-color: yellow;
+    z-index: 100;
+    transition: .3s;
+}
+
+.nav__link {
+    display: block;
+    color: #000;
+    padding: 10px 20px;
+    transition: .3s;
+    border-right: 1px solid #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 0;
+}
+
+.nav__link:hover {
+    text-decoration: none;
+    background-color: #503e1c;
+    color: yellow;
+}
+
+/* /////////////////HAEDER------------------- */
+/* -----------------SLIDER------------------- */
+.slider {
+    position: relative;
+}
+
+.slide {
+    height: 60vw;
+}
+
+.title-wrap {
+    text-align: center;
+    padding: 75px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    color: yellow;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.owl-nav {
+    font-size: 48px;
+}
+
+.owl-prev {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 80;
+    transition: .3s;
+}
+
+.owl-next {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 80;
+    transition: .3s;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel button.owl-dot {
+    background-color: rgba(0, 0, 0, .4);
+    color: yellow;
+    transition: .3s;
+}
+
+.owl-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel button.owl-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid yellow;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: yellow;
+}
+
+button.owl-dot:last-child {
+    margin-right: 0;
+}
+
+/* /////////////////SLIDER------------------- */
+/* -------------ABOUT US--------------------- */
+.about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 45px;
+}
+
+.section__subtitle {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.about__items-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about__item {
+    width: 250px;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.about__item .fas {
+    display: block;
+    font-size: 90px;
+}
+
+.about__title {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    min-height: 110px;
+}
+
+.feedback-btn,
+.reviews-btn {
+    width: 250px;
+    display: block;
+    margin: 50px auto 0 auto;
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 0;
+    border: 2px solid #000;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feedback-btn:hover,
+.reviews-btn:hover {
+    text-decoration: none;
+    background-color: #503e1c;
+    color: yellow;
+}
+
+/* /////////////ABOUT US--------------------- */
+/* ---------------PHOTOS---------------------- */
+.photos {
+    background: url(../img/sundry/truck-3401529_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.photos:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.photos .section__title {
+    position: relative;
+    z-index: 100;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.photos__slide {
+    display: block;
+    border: 1px solid #000;
+}
+
+/* ///////////////PHOTOS---------------------- */
+/* --------------REVIEWS SLIDER----------------- */
+/* .reviews__slider {
+    width: 100%;
+} */
+
+.reviews__item {
+    box-sizing: border-box;
+    min-height: 340px;
+    padding: 20px;
+    border: 2px solid #4c4949;
+}
+
+.reviews__item-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.reviews__item-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.reviews__item-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #4c4949;
+    overflow: hidden;
+}
+
+.reviews__item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* //////////////REVIEWS SLIDER----------------- */
+/* -------------CONTACTS------------------------- */
+.contacts__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts__form-wrap,
+.contacts__our-wrap {
+    width: 48%;
+    margin: 0 auto;
+}
+
+/* Базовые стили формы */
+.contacts__form,
+.header__tel--contacts {
+    margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+
+/* Стили полей ввода */
+.contacts__form-textbox {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.contacts__form-textbox:focus {
+    outline: none;
+    border: yellow 2px solid;
+    color: #000;
+}
+
+/* Базовые стили кнопки */
+.contacts__form-button {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 0px solid;
+    box-sizing: border-box;
+    padding: 10px;
+    background: yellow;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    transition: background .3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Изменение фона кнопки при наведении */
+.contacts__form-button:hover {
+    text-decoration: none;
+    background-color: #503e1c;
+    color: yellow;
+}
+
+.section__subtitle--form {
+    color: yellow;
+}
+
+
+
+/* /////////////CONTACTS------------------------- */
+/* ------------------FOOTER---------------------------- */
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contacts {
+    text-align: right;
+}
+
+.footer__tel-link {
+    display: block;
+}
+
+.author-link,
+.footer__nav-link,
+.footer__tel-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+.author-link:hover,
+.footer__nav-link:hover,
+.footer__tel-link:hover {
+    color: yellow;
+}
+
+/* //////////////////FOOTER---------------------------- */
+/* --------------------MODAL FORM CALLBACK------------------------- */
+.modal-contacts-wrap {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 250;
+}
+
+/* Базовые стили формы */
+.modal-contacts__form,
+.modal-header__tel--contacts {
+    width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+
+.modal-contacts__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Стили полей ввода */
+.modal-contacts__form-textbox {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.modal-contacts__form-textbox:focus {
+    outline: none;
+    border: yellow 2px solid;
+    color: #000;
+}
+
+/* Базовые стили кнопки */
+.modal-contacts__form-button {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 0px solid;
+    box-sizing: border-box;
+    padding: 10px;
+    background: yellow;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: background .3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Изменение фона кнопки при наведении */
+.modal-contacts__form-button:hover {
+    text-decoration: none;
+    background-color: #503e1c;
+    color: yellow;
+}
+
+.modal-section__subtitle--form {
+    color: yellow;
+}
+
+.modal-contacts__closed-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 10px;
+}
+
+.modal-contacts__closed-btn:before,
+.modal-contacts__closed-btn:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.modal-contacts__closed-btn:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-contacts__closed-btn:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* ////////////////////MODAL FORM CALLBACK------------------------- */
+/* -----------------REVIEWS FORM------------------------------- */
+.reviews-form-wrap {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 250;
+}
+
+.reviews-form {
+    width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+
+.reviews-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reviews-form__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: yellow;
+}
+
+.reviews-form__label {
+    font-size: 18px;
+    color: #fff;
+}
+
+.reviews-form__input-name,
+.reviews-form__input-text {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.reviews-form__input-text {
+    height: 150px;
+}
+
+.reviews-form__input-name:focus,
+.reviews-form__input-text:focus {
+    outline: none;
+    border: yellow 2px solid;
+    color: #000;
+}
+
+.reviews-form__send {
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 0px solid;
+    box-sizing: border-box;
+    padding: 10px;
+    background: yellow;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: background .3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.reviews-form__send:hover {
+    text-decoration: none;
+    background-color: #503e1c;
+    color: yellow;
+}
+
+.reviews-form__closed-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 10px;
+}
+
+.reviews-form__closed-btn:before,
+.reviews-form__closed-btn:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.reviews-form__closed-btn:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.reviews-form__closed-btn:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* //////////////////REVIEWS FORM------------------------------- */
